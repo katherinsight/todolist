@@ -10,6 +10,7 @@
 import Todolist from './components/Todolist.vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import TodoInput from './components/TodoInput.vue'
 
 
 export default {
@@ -18,6 +19,7 @@ export default {
 	Todolist,
 	Header,
 	Footer,
+	TodoInput,
   },
 }
 </script>
