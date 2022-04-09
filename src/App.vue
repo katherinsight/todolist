@@ -1,16 +1,23 @@
 <template>
 	<div id="app">
-		<Todolist></Todolist>
+		<Header />
+		<Todolist />
+		<Footer />
 	</div>
 </template>
 
 <script>
 import Todolist from './components/Todolist.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+
 
 export default {
   name: 'App',
   components: {
-    Todolist
+	Todolist,
+	Header,
+	Footer,
   },
 }
 </script>
