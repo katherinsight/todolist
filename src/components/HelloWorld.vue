@@ -12,16 +12,15 @@
 </template>
 
 <script>
-var code ={name:'경민', age:30};
 export default {
-  name: 'HelloWorld',
+  name: 'todolist',
   data: function() {
 	  return {
-    		msg: '뷰입니다',
-		  	array: ['커피','자동차','음료'],
-		  	person1: {name:'경민', age:30},
-		  	person2: {name:'아이유', age:28},
-		    person3: {name:'존박', age:35}
+    		list : [
+				{text: "사진 올리기", value:1},
+				{text: "vuejs수업 finish", value:2},
+				{text: "아레니 만나기", value:3},
+			],
 	  }
   }
 }
