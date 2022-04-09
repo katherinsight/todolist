@@ -3,14 +3,13 @@
     <main class="todo">
         <div class="container">
             <h1>캐써린의 To - Do List</h1>
-			
-			<!-- ul.todo_input -->
+
 			<TodoInput @addTodo="addTodo"/>	
-			<!--// ul.todo_input -->
 
             <!-- ul.todo_list -->
             <ul class="todo_list">
                 <li class="todo_list_tit"><p>할 일 To-do list</p></li>
+				<li><p>	{{ remaining }} / {{ todolist.length }} 건 처리 </p></li>
                 <li class="del_btn" v-for="(item, index) in todolist" :key="index">
                     <p :class="{doneStyle:item.done}"><input type="checkbox" name="check1" v-model="item.done"> {{ item.todo }}</p>
                     <ul class="todo_list_btn">
@@ -49,6 +48,13 @@ export default {
 
 			]
 			
+		}
+	},
+	computed:{
+		remaining(){
+			return this.todolist.filter(function(val){
+				return val.done;
+			}).length;
 		}
 	},
 	methods:{
