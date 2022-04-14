@@ -3,7 +3,7 @@
      <header id="header">
         <div class="container">
             <div class="header">
-                <h1 class="logo"><a>LOGO</a></h1>
+                <h1 class="logo"><a>Katherine's</a></h1>
                 <nav>
                     <ul class="nav">
                         <li><p>TODOLIST</p></li>
