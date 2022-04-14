@@ -7,11 +7,11 @@
 
             <ul class="todo_list">
                 <li class="todo_list_tit"><p>할 일</p></li>
-				<li><p> {{ remaining }} / {{ todolist.length }} 건 처리 </p>
+				<li><p> {{ remaining }} / {{ todolist.length }} 건 처리, {{todolist.length - remaining}} 건 남음. 처리 포인트 합계: 21 </p>
 					<button @click="cleanTodo"> 처리완료삭제 </button>
 				</li>
                 <li class="del_btn" v-for="(item,index) in todolist" :key="index">
-                    <p :class="{doneStyle:item.done}"><input type="checkbox" name="check1" v-model="item.done">{{ item.todo }}</p>
+                    <p :class="{doneStyle:item.done}"><input type="checkbox" name="check1" v-model="item.done">{{ item.todo }} {{}}</p>
 					<ul class="todo_list_btn">
                         <li><button @click="subTodo(index)">삭 제</button></li>
                     </ul>
