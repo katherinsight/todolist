@@ -1,34 +1,27 @@
 <template>
-  <div id="app">
-	<Header />
-	<Todolist />
-	<Footer />
-  </div>
+	<div id="app">
+		<Header />
+		<TodoInput />
+		<Todolist />
+		<Footer />
+	</div>
 </template>
 
 <script>
 import Todolist from './components/Todolist.vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-	
+import TodoInput from './components/TodoInput.vue'
+
+
 export default {
   name: 'App',
   components: {
 	Todolist,
 	Header,
-	Footer
+	Footer,
+	TodoInput,
   },
-  data:function(){
-	return {
-		hello:"a",
-  	}
-  },
-	methods: {
-		childCall(val){
-			console.log(val);
-			this.hello = val;
-		}
-	}
 }
 </script>
 

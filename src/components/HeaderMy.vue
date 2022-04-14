@@ -1,6 +1,6 @@
 <template>
   <div>
-     <header id="header">
+    <header id="header">
         <div class="container">
             <div class="header">
                 <h1 class="logo"><a>LOGO</a></h1>
@@ -25,8 +25,11 @@
   </div>
 </template>
 
-<script>
+<script>	
 export default {
-  name: 'header',
+	name: 'header',
 }
 </script>
+
+<style>
+</style>
