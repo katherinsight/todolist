@@ -11,7 +11,10 @@
 					<button @click="cleanTodo"> 처리완료삭제 </button>
 				</li>
                 <li class="del_btn" v-for="(item,index) in todolist" :key="index">
-                    <p :class="{doneStyle:item.done}"><input type="checkbox" name="check1" v-model="item.done">{{ item.todo }} {{}}</p>
+                    <p :class="{doneStyle:item.done}"><input type="checkbox" name="check1" v-model="item.done">
+						{{ item.todo[0] }}
+					<div v-if=item.todo[1]> 중요! </div>
+						{{ item.todo[2] }}</p>
 					<ul class="todo_list_btn">
                         <li><button @click="subTodo(index)">삭 제</button></li>
                     </ul>
@@ -34,11 +37,11 @@ export default {
   data: function() {  
 	  return {
 		  todolist:[
-			  {done:false, todo:"Vue.js 공부하기"},
-			  {done:false, todo:"독서 2p 이상"},
-			  {done:false, todo:"과제하기"},
-			  {done:false, todo:"9시-스터디하기"},
-			  {done:false, todo:"과제 채점"},
+			  {done:false, todo:["Vue.js 공부하기", true, 7]},
+			  {done:false, todo:["독서 2p 이상", false, 3]},
+			  {done:false, todo:["과제하기", true, 10]},
+			  {done:false, todo:["9시-스터디하기", true, 8]},
+			  {done:false, todo:["과제 채점", true, 6]},
 		  ]
 	  }
   },
